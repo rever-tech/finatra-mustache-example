@@ -22,7 +22,6 @@ class Server extends HttpServer {
   override protected def configureHttp(router: HttpRouter): Unit = {
     router.filter[CommonFilters]
       .add[http.Hello]
-
+      .add[http.BaseController]
   }
-
 }
